@@ -20,12 +20,13 @@
   padding: 15px 20px;
   opacity: 1;
   transition: all 0.7s ease;
+  align-self: flex-end;
+  margin-top: 200px;
 }
 
-.todo-card-container-hide {
+.todo-card-container.hide {
   max-height: 0px;
   opacity: 0;
-  transition: all 0.7s ease;
 }
 
 /* TODO CARD HEADER*/
@@ -48,7 +49,7 @@
   text-align: center;
 }
 
-.todo-card-center-hide {
+.todo-card-center.hide {
   display: none;
 }
 
@@ -65,16 +66,16 @@
   cursor: pointer;
 }
 
-/*TODO LIST UL*/
-.todo-container {
+/*TODOS LIST UL*/
+.todos-container {
   display: none;
 }
 
-.todo-container-show {
+.todos-container.show {
   display: block;
 }
 
-.todo-list {
+.todos-list {
   min-width: 100%;
   padding: 0 20px 0 0;
   margin: 8px 0 8px 16px;
@@ -151,6 +152,7 @@
   font-size: 14px;
   border: none;
   outline: none;
+  background: transparent;
   /*caret-color: transparent;
       border-left: 2px solid #8a8280;
       animation: 1.5s blink step-end infinite;*/

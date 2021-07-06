@@ -4,7 +4,7 @@ import Greeting from '../components/greeting/Greeting'
 import SearchForm from '../components/search/SearchForm'
 import Forecast from '../components/forecast/Forecast'
 import Weather from '../components/weather/Weather'
-import Todo from '../components/todo/Todo'
+import Todos from '../components/todo/Todos'
 import TodoToggle from '../components/todo/TodoToggle'
 import ImageLocation from '../components/location/ImageLocation'
 import Quote from '../components/quote/Quote'
@@ -31,7 +31,7 @@ const ContainerOverlay = ({ showTodoCard, setShowTodoCard }) => {
                 <div className="three">
                     <Weather showForecast={showForecast} setShowForecast={setShowForecast}/>
                     <Forecast showForecast={showForecast}/>
-                    <Todo showTodoCard={showTodoCard} />
+                    <Todos showTodoCard={showTodoCard} />
                 </div>
             </div>
             <div className= {isColorLight ? 'four-bg-darken' : 'four'}>

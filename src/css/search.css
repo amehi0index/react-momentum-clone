@@ -30,18 +30,8 @@
   transition: opacity 0.5s ease;
 }
 
-.search-form-show {
-  border: none;
-  border-bottom: 1.5px solid rgba(228, 222, 222, 0.7);
-  outline: none;
-  background: none;
-  color: #fff;
+.search-form.show {
   opacity: 1;
-  width: 100%;
-  display: flex;
-  align-items: flex-end;
-  justify-content: flex-end;
-  transition: opacity 0.5s ease;
 }
 
 .search-title,
@@ -51,10 +41,6 @@
 
 .search-icon {
   padding-right: 6px;
-}
-
-.search-form-show {
-  opacity: 1;
 }
 
 .search-form i {
@@ -116,14 +102,6 @@
   font-size: 0.6rem;
   font-weight: 600;
   text-transform: uppercase;
-}
-
-.search-links-card-show {
-  opacity: 1;
-}
-
-.search-links-card-hide {
-  opacity: 0;
 }
 
 .search-links-card .search-links-list {

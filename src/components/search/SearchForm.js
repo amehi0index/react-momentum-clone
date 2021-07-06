@@ -75,7 +75,7 @@ const SearchForm = () => {
                 <p className="search-title">Links</p>
                 <span className="search-icon"><i className="fas fa-search" onClick={toggleForm}></i></span>
             
-                    <form action ={formAction}  method = "GET" target="_blank" className ={showSearchForm ? 'search-form-show' : 'search-form'} onSubmit={handleSubmit}>
+                    <form action ={formAction}  method = "GET" target="_blank" className ={showSearchForm ? 'search-form show' : 'search-form'} onSubmit={handleSubmit}>
                         <input type="text" ref={clearInput} className="search-input" name= "q" value={query} placeholder="" onChange={(e)=>setQuery(e.target.value)}/>
                         <span className="search-arrow">
                             <button 

@@ -5,7 +5,7 @@ import { useLocalStorage } from '../../hooks/useLocalStorage'
 import tinycolor from 'tinycolor2'
 import '../../css/todo.css'
 
-const Todo = ({ showTodoCard }) => {
+const Todos = ({ showTodoCard }) => {
 
     const focusInput = useRef(null)
 
@@ -59,16 +59,15 @@ const Todo = ({ showTodoCard }) => {
       
     },[imageData.color, imageData.url, focusInput])
 
-
     return (
-        <div div className={!showTodoCard ? 'todo-card-container-hide' : 'todo-card-container'}>
+        <div div className={!showTodoCard ? 'todo-card-container hide' : 'todo-card-container'}>
             <h2>Today</h2>
-            <div className={!showTodos ? 'todo-card-center': 'todo-card-center-hide'} >
+            <div className={!showTodos ? 'todo-card-center': 'todo-card-center hide'} >
                 <p>Add a todo to get started</p>
                 <button className="todo-btn-center" onClick={onClick}>New Todo</button>
             </div>
-            <div className={showTodos ? 'todo-container-show' : 'todo-container'}>
-                <ul className="todo-list">
+            <div className={showTodos ? 'todos-container show' : 'todos-container'}>
+                <ul className="todos-list">
                     {todos.map((todo, index) => (
                         <TodoItem  key={index} todo={todo.item}  isComplete={todo.isComplete} index={index} todos={todos} setTodos={setTodos}/>
                     ))} 
@@ -83,4 +82,4 @@ const Todo = ({ showTodoCard }) => {
     )
 }
 
-export default Todo
+export default Todos
