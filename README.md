@@ -1,70 +1,108 @@
-# Getting Started with Create React App
+# Momentum Clone
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![Project Image](spices.png)
 
-## Available Scripts
+> Momentum Clone Application built in React. Utilizes a Node-Express proxy server to hide API keys and fetch third-party API data.
 
-In the project directory, you can run:
+---
 
-### `npm start`
+### Table of Contents
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- [Description](#description)
+- [How To Use](#how-to-use)
+- [API References](#references)
+- [License](#license)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+---
 
-### `npm test`
+## Description
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+This is a clone productivity application based on the Chrome Momentum Application. This application uses the Google, Yahoo, and Bing search engines and local storage to save user preferences.
 
-### `npm run build`
+#### Public API's
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Unsplash API
+- Openweather API
+- They Said So Quotes API
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+#### Technologies
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- React : v17.0.2
+- Node : v14.15.4
+- Express : v4.17.1
+- CSS3
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## How To Use
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Install Concurrently at project root:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+```
+npm install -D concurrently
+```
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+In the root package.json:
 
-## Learn More
+```
+  "scripts": {
+    "scripts": "node backend/server.js",
+    "server": "nodemon backend/server.js",
+    "client": "npm start --prefix client",
+    "clientinstall": "npm install --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  }
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+In the client package.json:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```
+  "proxy": "http://localhost:5000"
+```
 
-### Code Splitting
+To run:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```
+npm run dev
+```
 
-### Analyzing the Bundle Size
+[Back To Top](#ultimate-herb-finder)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+---
 
-### Making a Progressive Web App
+## API References
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+To fetch data from API, create variables in the root .env file for each third-party API:
 
-### Advanced Configuration
+```
+API_BASE_URL = https://api.unsplash.com/photos/random
+API_UNSPLASH_KEY = "Your API Key"
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+In the relevant route file, i.e. background.js:
 
-### Deployment
+```
+try {
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+    const params = new URLSearchParams({
+        client_id : process.env.API_UNSPLASH_KEY,
+        ...url.parse(req.url, true).query
+    })
 
-### `npm run build` fails to minify
+    const apiRes = await needle('get', `${process.env.API_UNSPLASH_URL}?${params}`)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+    const data = apiRes.body
+    res.status(200).json(data)
+
+} catch (error) {
+    res.status(500).json({error})
+}
+```
+
+---
+
+## License
+
+This project is licensed under the [MIT License](#LICENSE.txt)
+
+Copyright (c) 2021 [Amelia Hill](#https://ameliahill.com)

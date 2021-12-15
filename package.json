@@ -1,49 +1,37 @@
 {
   "name": "react-momentum",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "@iconify/icons-simple-icons": "^1.1.27",
-    "@iconify/react": "^1.1.4",
-    "@testing-library/jest-dom": "^5.12.0",
-    "@testing-library/react": "^11.2.7",
-    "@testing-library/user-event": "^12.8.3",
-    "axios": "^0.21.1",
-    "moment": "^2.29.1",
-    "react": "^17.0.2",
-    "react-contenteditable": "^3.3.5",
-    "react-dom": "^17.0.2",
-    "react-moment": "^1.1.1",
-    "react-scripts": "4.0.3",
-    "react-skycons": "^0.8.8",
-    "tinycolor2": "^1.4.2",
-    "web-vitals": "^1.1.2"
-  },
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "scripts": "node backend/server.js",
+    "server": "nodemon backend/server.js",
+    "client": "npm start --prefix client",
+    "clientinstall": "npm install --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amehi4yus/react-momentum-clone.git"
   },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+  "author": "Amelia Hill",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/amehi4yus/react-momentum-clone/issues"
+  },
+  "homepage": "https://github.com/amehi4yus/react-momentum-clone#readme",
+  "dependencies": {
+    "apicache": "^1.6.3",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "express-rate-limit": "^5.5.1",
+    "find-config": "^1.0.0",
+    "needle": "^3.0.0",
+    "node-fetch": "^2.6.6"
   },
   "devDependencies": {
-    "file-loader": "^6.2.0"
+    "concurrently": "^6.4.0",
+    "nodemon": "^2.0.15"
   }
 }

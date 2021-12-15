@@ -1,0 +1,76 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.container {
+  position: relative;
+  height: 100vh;
+  display: grid;
+  /*grid-template-columns: 20% 60% 20%;*/
+  grid-template-areas:
+    'one two two two three'
+    'one two two two three'
+    'one two two two three'
+    'one two two two three'
+    'one two two two three'
+    'one two two two three'
+    'four four four four four';
+  width: 100vw;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.container.bg-darken {
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.one {
+  grid-area: one;
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+}
+
+.two {
+  grid-area: two;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.three {
+  grid-area: three;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+}
+
+.four {
+  grid-area: four;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 30px;
+}
+
+@media (max-width: 700px) {
+  #time {
+    font-size: 6rem;
+  }
+  .container {
+    display: grid;
+    grid-column: auto;
+    text-align: center;
+  }
+}
