@@ -8,7 +8,7 @@ const Greeting = () => {
 
 const [greeting, setGreeting] = useState("")
 const [time, setTime] = useState(new Date())
-const [focus, setFocus] = useLocalStorage("focus", "Do the knowledge")
+const [focus, setFocus] = useLocalStorage("focus", "Learn all the things!")
 
 const nameRef = useRef();
 const focusRef = useRef();
@@ -33,7 +33,7 @@ const [isFocusEmpty, setIsFocusEmpty] = useState(true)
     useEffect(()=> {
         setTimeout( () => setTime(new Date()), 1000)
         setGreeting(salutation) 
-    },[greeting, focus, user, time])
+    },[greeting, focus, user, time, salutation])
     
     const handleNameChange = (e) => {
         const html = e.target.value

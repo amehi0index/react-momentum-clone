@@ -38,6 +38,7 @@
 .temperature .temperature-city {
   font-size: 12px;
   cursor: pointer;
+  padding-top: 5px;
 }
 
 .temperature .temperature-description {

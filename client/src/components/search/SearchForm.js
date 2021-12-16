@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react'
+import React, { useState, useEffect, useRef, useCallback } from 'react'
 import SearchCard from './SearchCard'
 import { Icon } from "@iconify/react"
 import { useLocalStorage } from '../../hooks/useLocalStorage'
@@ -18,10 +18,23 @@ const SearchForm = () => {
     const [formAction, setFormAction] = useState("")
 
     const clearInput = useRef(null)
-   
+
+    const getPriorSearch = useCallback(() => {
+        setSearchString(localStorage.getItem('search'))
+        let searchURL =`${searchString}${query}`
+        setFormAction(searchURL)
+    }, [query, searchString])
+
     useEffect(()=> {
         getPriorSearch()
-    },[])
+    },[getPriorSearch])
+    /*function getPriorSearch(){
+        setSearchString(localStorage.getItem('search'))
+        let searchURL =`${searchString}${query}`
+        setFormAction(searchURL)
+    }*/
+
+  
 
     const handleSubmit = (e) => {
   
@@ -39,12 +52,7 @@ const SearchForm = () => {
         if (showCard) setShowcard(false)
     }
 
-    const getPriorSearch = () => {
-            setSearchString(localStorage.getItem('search'))
-            let searchURL =`${searchString}${query}`
-            setFormAction(searchURL)
-    }
-
+  
     const onClick = (e) => {
 
         let searchURL
@@ -77,6 +85,7 @@ const SearchForm = () => {
     }
 
     return (
+        <div class="search-wrap">
         <div className="search-container">
             <div className="search-form-container">
                 <div className="search-title">
@@ -106,6 +115,7 @@ const SearchForm = () => {
                 </form>
             </div>
             {showCard && <SearchCard setBtnValue={setBtnValue} setIcon={setIcon}/>}
+        </div>
         </div>
     )
 }

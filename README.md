@@ -1,6 +1,6 @@
 # Momentum Clone
 
-![Project Image](spices.png)
+![Project Image](weather.png)
 
 > Momentum Clone Application built in React. Utilizes a Node-Express proxy server to hide API keys and fetch third-party API data.
 

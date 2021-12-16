@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect, useCallback} from 'react'
+import React, { useState, useRef, useEffect } from 'react'
 import TodoItem from './TodoItem'
 import useUnsplashAPI from '../../hooks/useUnsplashAPI'
 import { useLocalStorage } from '../../hooks/useLocalStorage'

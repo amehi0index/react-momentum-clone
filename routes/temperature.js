@@ -1,22 +1,28 @@
 const express = require('express')
 const router = express.Router()
+const rateLimit = require('express-rate-limit')
 const needle = require('needle')
 const apicache = require('apicache')
 const url = require('url')
 
+const limiter = rateLimit({
+    windowMS: 10 * 60 * 1000,   //10min
+    max: 1
+})
+
 //Initialize cache
 let cache = apicache.middleware
 
-router.get('/', cache('2 minutes'), async (req, res) => {
-    //console.log(url.parse(req.url, true).query)
+router.get('/', limiter, async (req, res) => { // cache('2 minutes')
+ 
     try {
 
         const params = new URLSearchParams({
-            appid: process.env.API_WEATHER_KEY,
-            ...url.parse(req.url, true).query
+            ...url.parse(req.url, true).query,
+            appid: process.env.API_WEATHER_KEY
         })
 
-        const apiRes = await needle('get', `${process.API_WEATHER_URL}${params}`)
+        const apiRes = await needle('get', `https://api.openweathermap.org/data/2.5/onecall?${params}`)
 
         const data = apiRes.body
 

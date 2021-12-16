@@ -9,13 +9,6 @@ const PORT = process.env.PORT || 5000
 
 const app = express()
 
-//Rate Limiting
-const limiter = rateLimit({
-    windowMS: 10 * 60 * 1000,   //10min
-    max: 10
-})
-
-app.use(limiter)
 app.set('trust proxy', 1)
 
 //Set static folder

@@ -8,16 +8,8 @@ const url = require('url')
 let cache = apicache.middleware
 
 router.get('/', cache('2 minutes'), async (req, res) => {
-    //console.log(url.parse(req.url, true).query)
+   
     try {
-
-      /*  const params = new URLSearchParams({
-            ...url.parse(req.url, true).query,
-        })
- 
-      const apiRes = await needle('get', `https://api.unsplash.com/photos/random?query=${params}&per_page=1&orientation=landscape&client_id=${process.env.API_UNSPLASH_KEY}`) */
-
-
         const params = new URLSearchParams({
             client_id : process.env.API_UNSPLASH_KEY,
             ...url.parse(req.url, true).query

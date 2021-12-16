@@ -1,8 +1,16 @@
+.search-wrap {
+  max-width: 440px;
+  min-width: 440px;
+}
+
 .search-container {
   color: #fff;
   width: 80%;
   display: flex;
   flex-direction: column;
+  margin-left: 20px;
+  padding-top: 30px;
+  font-size: 18px;
 }
 
 .search-form-container {
@@ -17,12 +25,10 @@
   justify-content: center;
 }
 .search-title p {
-  font-size: 20px;
   margin-right: 10px;
 }
 
 .search-title .search-icon {
-  font-size: 18px;
   padding-right: 6px;
 }
 

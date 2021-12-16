@@ -1,9 +1,7 @@
-import React, { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react'
 import axios from 'axios'
 
 const useUnsplashAPI = () => {
-
-    let key = process.env.REACT_APP_UNSPLASH_API_KEY
 
     const setTerm = () => {
         let term
