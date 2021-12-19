@@ -17,6 +17,7 @@ body {
   position: relative;
   height: 100vh;
   display: grid;
+  justify-content: center;
   /*grid-template-columns: 20% 60% 20%;*/
   grid-template-areas:
     'one two two two three'

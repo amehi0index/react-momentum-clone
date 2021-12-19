@@ -28,14 +28,7 @@ const SearchForm = () => {
     useEffect(()=> {
         getPriorSearch()
     },[getPriorSearch])
-    /*function getPriorSearch(){
-        setSearchString(localStorage.getItem('search'))
-        let searchURL =`${searchString}${query}`
-        setFormAction(searchURL)
-    }*/
-
-  
-
+   
     const handleSubmit = (e) => {
   
         if(localStorage.getItem('search') === '' || localStorage.getItem('search') === null){
@@ -52,7 +45,6 @@ const SearchForm = () => {
         if (showCard) setShowcard(false)
     }
 
-  
     const onClick = (e) => {
 
         let searchURL

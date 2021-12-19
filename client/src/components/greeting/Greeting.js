@@ -8,7 +8,7 @@ const Greeting = () => {
 
 const [greeting, setGreeting] = useState("")
 const [time, setTime] = useState(new Date())
-const [focus, setFocus] = useLocalStorage("focus", "Learn all the things!")
+const [focus, setFocus] = useLocalStorage("focus", "Learn all the things")
 
 const nameRef = useRef();
 const focusRef = useRef();

@@ -61,7 +61,7 @@ const useOpenWeatherAPI = () => {
                     
                 }
        
-               getWeather()
+               //getWeather()
             })
          }
     }, [currentWeather, forecastData])

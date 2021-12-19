@@ -12,6 +12,10 @@
 
 #quote {
   transition: transform 0.5s linear;
+  white-space: nowrap;
+  width: 80%;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 #author {

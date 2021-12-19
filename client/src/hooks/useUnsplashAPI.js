@@ -20,11 +20,7 @@ const useUnsplashAPI = () => {
 
     const searchTerm = setTerm()
 
-    //const imageURL = `/api/background?query=${searchTerm}`
-
     const imageURL = `/api/background?query=${searchTerm}&per_page=1&orientation=landscape`
-
-    /*const imageURL = `https://api.unsplash.com/photos/random?query=${searchTerm}&per_page=1&orientation=landscape&//client_id=${key}`*/
 
     const [imageData, setImageData ] = useState({
         url: "",
@@ -53,11 +49,9 @@ const useUnsplashAPI = () => {
         }
     getImages()
 
-    
     }, [imageData.user, imageData.url, imageURL])
     
     return [imageData]
-
 }
 
 export default useUnsplashAPI
