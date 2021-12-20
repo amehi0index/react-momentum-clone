@@ -2,12 +2,18 @@ const express = require('express')
 const router = express.Router()
 const needle = require('needle')
 const apicache = require('apicache')
+const rateLimit = require('express-rate-limit')
 const url = require('url')
 
 //Initialize cache
 let cache = apicache.middleware
 
-router.get('/', cache('2 minutes'), async (req, res) => {
+const limiter = rateLimit({
+    windowMS: 10 * 60 * 1000,   //10min
+    max: 3
+})
+
+router.get('/', limiter, cache('2 minutes'), async (req, res) => { 
    
     try {
         const params = new URLSearchParams({

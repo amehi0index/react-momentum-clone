@@ -5,8 +5,8 @@
 .temperature {
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
-  padding-right: 30px;
+  /*align-items: flex-end;*/
+  /*padding-right: 30px;*/
 }
 
 .temperature-section {

@@ -47,7 +47,7 @@ const useUnsplashAPI = () => {
                 color: color
             })
         }
-    getImages()
+        getImages()
 
     }, [imageData.user, imageData.url, imageURL])
     

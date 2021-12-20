@@ -60,8 +60,8 @@ const useOpenWeatherAPI = () => {
                     setForecastData(dailyForecast)
                     
                 }
-       
-               //getWeather()
+                
+                getWeather()
             })
          }
     }, [currentWeather, forecastData])

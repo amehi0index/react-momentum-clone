@@ -7,9 +7,6 @@
 body {
   font-family: 'Poppins', sans-serif;
   color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   overflow: hidden;
 }
 
@@ -17,8 +14,8 @@ body {
   position: relative;
   height: 100vh;
   display: grid;
-  justify-content: center;
-  /*grid-template-columns: 20% 60% 20%;*/
+  /*justify-content: center;*/
+  /*grid-template-columns: 24% 50% 24%;*/
   grid-template-areas:
     'one two two two three'
     'one two two two three'
@@ -28,6 +25,8 @@ body {
     'one two two two three'
     'four four four four four';
   width: 100vw;
+  min-width: 100vw;
+  max-width: 100vw;
   background: rgba(0, 0, 0, 0.2);
 }
 
@@ -39,7 +38,7 @@ body {
   grid-area: one;
   display: flex;
   flex-direction: column;
-  /* padding: 30px;*/
+  padding: 30px 0 0 30px;
 }
 
 .two {
@@ -64,7 +63,7 @@ body {
   display: flex;
   justify-content: space-between;
   width: 100%;
-  padding: 0 30px;
+  padding: 30px;
 }
 
 @media (max-width: 700px) {
