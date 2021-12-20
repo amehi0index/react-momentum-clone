@@ -18,7 +18,7 @@
   flex-direction: column;
   border-radius: 8px;
   min-width: 300px;
-  max-height: 250px;
+  max-height: 200px;
   padding: 15px 20px;
   opacity: 1;
   transition: all 0.7s ease;
@@ -43,7 +43,7 @@
 
 /*TODO CARD CENTER*/
 .todo-card-center {
-  margin: 50px 0;
+  margin: 30px 0;
   display: flex;
   flex-direction: column;
   text-align: center;

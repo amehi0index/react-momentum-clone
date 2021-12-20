@@ -2,13 +2,13 @@
   background: #fdfdfd;
   color: #000;
   border-radius: 8px;
-  max-width: 440px;
-  max-height: 300px;
+  max-width: 340px;
+  max-height: 260px;
   padding: 0 20px;
   margin: 15px 0 50px 0;
   opacity: 0;
   transition: all 0.3s ease;
-  font-size: 18px;
+  font-size: 16px;
 }
 
 .forecast-card-container.show {
@@ -35,7 +35,7 @@
 }
 
 .forecast-current-city {
-  font-size: 20px;
+  font-size: 16px;
   line-height: 1;
 }
 .forecast-current-day {
@@ -52,19 +52,19 @@
 
 .forecast-current-info i {
   padding-right: 8px;
-  font-size: 52px;
+  font-size: 42px;
 }
 
 .forecast-current-toggle {
   margin-top: 8px;
   display: flex;
-  font-size: 32px;
+  font-size: 22px;
   line-height: 1;
   cursor: pointer;
 }
 .forecast-current-span {
   margin-top: 3px;
-  font-size: 18px;
+  font-size: 16px;
 }
 
 .forecast-current-description {
