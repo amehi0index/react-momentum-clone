@@ -10,7 +10,7 @@ let cache = apicache.middleware
 
 const limiter = rateLimit({
     windowMS: 10 * 60 * 1000,   //10min
-    max: 3
+    max: 1
 })
 
 router.get('/', limiter, cache('2 minutes'), async (req, res) => { 

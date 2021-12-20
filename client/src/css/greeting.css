@@ -1,5 +1,5 @@
 #time {
-  font-size: 1050%;
+  font-size: 950%;
   font-weight: 600;
   line-height: 1;
 }
@@ -29,7 +29,7 @@ h2 {
 .greeting-container input[type='text'] {
   background: none;
   color: #fff;
-  font-size: 3rem;
+  font-size: 1rem;
   font-weight: 800;
   outline: none;
   border: 0;
@@ -38,7 +38,7 @@ h2 {
 .name::placeholder,
 .focus::placeholder {
   font-family: 'Poppins', 'sans-serif';
-  font-size: 3rem;
+  font-size: 2rem;
   color: #fff;
   opacity: 0.6;
 }
@@ -53,7 +53,7 @@ h2 {
 
 .greeting,
 .name {
-  font-size: 3.75rem;
+  font-size: 2.75rem;
 }
 
 .name {
@@ -70,7 +70,7 @@ h2 {
 .focus-q,
 .focus,
 .focus-show-line {
-  font-size: 3rem;
+  font-size: 2rem;
 }
 
 .focus-q {

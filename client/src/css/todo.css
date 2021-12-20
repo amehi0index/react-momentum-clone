@@ -1,6 +1,6 @@
 /*TODO TOGGLE*/
 .todo-toggle {
-  font-size: 18px;
+  font-size: 16px;
   min-width: 20%;
   display: flex;
   justify-content: flex-end;
@@ -33,11 +33,11 @@
 .todo-card-container h2 {
   align-self: flex-start;
   justify-self: flex-start;
-  font-size: 18px;
+  font-size: 16px;
 }
 
 .todo-card-container p {
-  font-size: 16px;
+  font-size: 14px;
   color: slategrey;
 }
 

@@ -19,13 +19,13 @@
 }
 
 .temperature i {
-  font-size: 1.25rem;
+  font-size: 1rem;
   padding: 0 2px;
 }
 
 .temperature-degree {
   margin-top: 12px;
-  font-size: 24px;
+  font-size: 16px;
   padding: 0 2px 1px 6px;
   cursor: pointer;
 }

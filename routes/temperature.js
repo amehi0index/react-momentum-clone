@@ -7,7 +7,7 @@ const url = require('url')
 
 const limiter = rateLimit({
     windowMS: 10 * 60 * 1000,   //10min
-    max: 2
+    max: 1
 })
 
 //Initialize cache
