@@ -1,12 +1,10 @@
 .temperature-container {
-  /* margin-bottom: 5px;*/
+  margin-right: 5px;
 }
 
 .temperature {
   display: flex;
   flex-direction: column;
-  /*align-items: flex-end;*/
-  /*padding-right: 30px;*/
 }
 
 .temperature-section {
@@ -26,20 +24,17 @@
 .temperature-degree {
   margin-top: 12px;
   font-size: 16px;
-  padding: 0 2px 1px 6px;
+  padding: 0 2px 0 3px;
   cursor: pointer;
 }
 
 .temperature-section span {
-  font-size: 14px;
-  margin-top: 7px;
   cursor: pointer;
 }
 
 .temperature .temperature-city {
-  font-size: 14px;
+  font-size: 12px;
   cursor: pointer;
-  padding-top: 5px;
 }
 
 .temperature .temperature-description {

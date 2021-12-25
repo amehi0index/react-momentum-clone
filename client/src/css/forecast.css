@@ -2,8 +2,9 @@
   background: #fdfdfd;
   color: #000;
   border-radius: 8px;
-  max-width: 440px;
-  max-height: 300px;
+  width: 320px;
+  max-width: 320px;
+  max-height: 230px;
   padding: 0 20px;
   margin: 15px 0 50px 0;
   opacity: 0;
@@ -17,7 +18,7 @@
 
 /*CARD CURRENT INFO*/
 .forecast-current {
-  max-width: 420px;
+  max-width: 300px;
 }
 
 .forecast-current-info {
@@ -25,7 +26,7 @@
   flex-flow: column;
   align-items: flex-start;
   justify-content: center;
-  max-width: 400px;
+  max-width: 300px;
   padding: 20px 20px 10px 10px;
 }
 
@@ -35,40 +36,40 @@
 }
 
 .forecast-current-city {
-  font-size: 20px;
+  font-size: 16px;
   line-height: 1;
 }
 .forecast-current-day {
-  color: #500250;
-  font-size: 14px;
+  font-size: 12px;
 }
 
 .forecast-current-temp {
   width: 150px;
   display: flex;
   align-items: center;
-  padding: 10px 0;
+  /*padding: 5px 0;*/
 }
 
 .forecast-current-info i {
   padding-right: 8px;
-  font-size: 52px;
+  font-size: 32px;
 }
 
 .forecast-current-toggle {
   margin-top: 8px;
   display: flex;
-  font-size: 32px;
+  font-size: 30px;
   line-height: 1;
   cursor: pointer;
 }
+
 .forecast-current-span {
   margin-top: 3px;
-  font-size: 18px;
+  font-size: 16px;
 }
 
 .forecast-current-description {
-  font-size: 14px;
+  font-size: 12px;
   color: #500250;
   text-transform: capitalize;
 }
@@ -88,8 +89,8 @@
   justify-content: space-evenly;
   border-radius: 6px;
   width: 100px;
-  margin: 5px 2px;
-  padding: 3px 0px;
+  margin: 2px;
+  padding: 2px 0px;
   text-transform: uppercase;
   transition: all 0.5s ease;
 }
@@ -97,13 +98,16 @@
 .forecast-item:hover {
   background: #dbd6d6;
 }
+
 .forecast-day {
-  font-size: 10px;
+  font-size: 9px;
 }
+
 .forecast-item i {
   font-size: 14px;
-  padding: 3px 0;
+  padding: 2px 0;
 }
+
 .forecast-hilo {
   display: flex;
   align-items: center;
@@ -112,7 +116,7 @@
 
 .forecast-hi,
 .forecast-lo {
-  font-size: 11px;
+  font-size: 9px;
   padding: 0 1.5px;
 }
 

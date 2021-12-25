@@ -1,6 +1,6 @@
 .search-wrap {
-  max-width: 440px;
-  min-width: 440px;
+  max-width: 330px;
+  min-width: 330px;
 }
 
 .search-container {
@@ -8,9 +8,7 @@
   width: 80%;
   display: flex;
   flex-direction: column;
-  /*margin-left: 20px;*/
-  /*padding: 30px 0 0 30px;*/
-  font-size: 16px;
+  font-size: 14px;
 }
 
 .search-form-container {
@@ -100,7 +98,7 @@
   max-height: 140px;
   align-self: flex-end;
   margin-top: 15px;
-  padding: 10px 12px;
+  padding: 5px 12px;
   font-size: 14px;
   background: #f3f0f0;
   color: #000;
@@ -120,7 +118,7 @@
   min-width: 120px;
   min-height: 120px;
   border-radius: 5px;
-  padding: 8px 0;
+  padding: 7px 0;
   list-style: none;
   display: flex;
   flex-direction: column;
@@ -144,20 +142,20 @@
 
 .google[data-icon='simple-icons:google'] {
   color: rgb(185, 34, 34);
-  height: 16px;
-  width: 16px;
+  height: 15px;
+  width: 15px;
   margin-right: 2px;
 }
 .yahoo[data-icon='simple-icons:yahoo'] {
   color: #5f01d1;
-  height: 18px;
-  width: 18px;
+  height: 17px;
+  width: 17px;
 }
 
 .bing[data-icon='simple-icons:bing'] {
   color: #00887a;
-  height: 18px;
-  width: 18px;
+  height: 17px;
+  width: 17px;
 }
 
 .search-links-list .yahoo span {

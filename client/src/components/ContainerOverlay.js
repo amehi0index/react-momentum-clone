@@ -22,24 +22,26 @@ const ContainerOverlay = ({ showTodoCard, setShowTodoCard }) => {
     return (
         <>
             <div className= {isColorLight ? 'container bg-darken' : 'container'}>
-                <div className="one">
-                    <SearchForm />
+                <div className="top-grid">
+                    <div className="one">
+                        <SearchForm />
+                    </div>
+                    <div className="two">
+                        <Greeting />
+                    </div>
+                    <div className="three">
+                        <Weather showForecast={showForecast} setShowForecast={setShowForecast}/>
+                        <Forecast showForecast={showForecast}/>
+                        <Todos showTodoCard={showTodoCard} />
+                    </div>
                 </div>
-                <div className="two">
-                    <Greeting />
-                </div>
-                <div className="three">
-                    <Weather showForecast={showForecast} setShowForecast={setShowForecast}/>
-                    <Forecast showForecast={showForecast}/>
-                    <Todos showTodoCard={showTodoCard} />
-                </div>
-
                 <div className= "four">
                     <ImageLocation />
                     <Quote />
                     <TodoToggle showTodoCard={showTodoCard}  setShowTodoCard={setShowTodoCard} />
                 </div>
             </div>
+          
           
         </>
     )
