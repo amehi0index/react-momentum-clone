@@ -102,7 +102,7 @@ const SearchForm = () => {
                             onClick={onClick}><Icon className={btnValue} 
                             icon={icon} 
                         /></button>
-                        <i className="arrow down"  onClick={()=>setShowcard(!showCard)}></i>
+                        <i class="fas fa-chevron-down arrow" onClick={()=>setShowcard(!showCard)}></i>
                     </span>
                 </form>
             </div>

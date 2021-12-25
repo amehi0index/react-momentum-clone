@@ -37,6 +37,7 @@
 
 /*SEARCH FORM*/
 .search-form {
+  display: flex;
   border: none;
   border-bottom: 1.5px solid rgba(228, 222, 222, 0.7);
   outline: none;
@@ -74,11 +75,16 @@
   outline: 0;
 }
 
+.search-arrow {
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: 2px;
+}
+
 .arrow {
-  border: solid #fff;
-  border-width: 0 0.094rem 0.094rem 0;
-  display: inline-block;
-  padding: 0.094rem;
+  font-size: 10px;
+  color: #fff;
+  padding: 2px;
   opacity: 0.8;
   cursor: pointer;
 }
@@ -87,9 +93,9 @@
   opacity: 1;
 }
 
-.down {
+/*.down {
   transform: rotate(45deg);
-}
+}*/
 
 /*SEARCH LINKS CARD*/
 .search-links-card {
