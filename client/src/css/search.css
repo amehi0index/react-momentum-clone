@@ -42,13 +42,10 @@
   border: none;
   border-bottom: 1.5px solid rgba(228, 222, 222, 0.7);
   outline: none;
-  background: none;
+  background: transparent;
   color: #fff;
-  opacity: 0.1;
+  opacity: 0;
   width: 100%;
-  display: flex;
-  align-items: flex-end;
-  justify-content: flex-end;
   transition: opacity 0.5s ease;
 }
 
@@ -63,10 +60,11 @@
 .search-input {
   color: #fff;
   font-weight: 500;
-  padding: 8px 0;
+  padding: 8px;
   border: none;
   outline: none;
   background: none;
+  width: 85%;
 }
 
 .search-submit-btn {

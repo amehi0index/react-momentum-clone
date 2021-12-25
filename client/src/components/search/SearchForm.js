@@ -30,14 +30,14 @@ const SearchForm = () => {
     },[getPriorSearch])
    
     const handleSubmit = (e) => {
-  
         if(localStorage.getItem('search') === '' || localStorage.getItem('search') === null){
             e.preventDefault()
             alert("Please select a search engine.")
             setShowSearchForm(true)
             return false;
         }
-        console.log(clearInput.current.value)
+        clearInput.current.value = ""
+        window.open(formAction, '_blank', 'noopener')
     }
 
     const toggleForm = () =>{
@@ -85,7 +85,7 @@ const SearchForm = () => {
                     <span className="search-icon"><i className="fas fa-search" onClick={toggleForm}></i></span>
                 </div>
             
-                <form action ={formAction}  method = "GET" className={showSearchForm ? 'search-form show' : 'search-form'} onSubmit={handleSubmit}>
+                <form method="GET" className={showSearchForm ? 'search-form show' : 'search-form'} onSubmit={handleSubmit}>
                     <input 
                         type="text" 
                         ref={clearInput} 

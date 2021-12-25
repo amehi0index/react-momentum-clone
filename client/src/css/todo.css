@@ -5,7 +5,7 @@
   display: flex;
   justify-content: flex-end;
   cursor: pointer;
-  /*padding-right: 30px;*/
+  padding-right: 30px;
 }
 
 /*TODO CARD*/
@@ -18,7 +18,7 @@
   flex-direction: column;
   border-radius: 8px;
   min-width: 300px;
-  max-height: 200px;
+  max-height: 230px;
   padding: 15px 20px;
   opacity: 1;
   transition: all 0.7s ease;
@@ -90,7 +90,7 @@
 
 .todo-item {
   margin: 0 8px;
-  font-size: 16px;
+  font-size: 14px;
   display: inline-block;
 }
 
