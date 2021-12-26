@@ -18,7 +18,9 @@ const BackgroundImage = () => {
         }
     }
 
-setBg(imageData.url)
+    if(!imageData.loading){
+        setBg(imageData.url)
+    }
 
     return (
         <div>

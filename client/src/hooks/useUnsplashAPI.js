@@ -28,7 +28,8 @@ const useUnsplashAPI = () => {
         user: "",
         links: "",
         liked_by_user: false,
-        color: ""
+        color: "",
+        loading: true
     })
 
     useEffect(() => {
@@ -43,7 +44,8 @@ const useUnsplashAPI = () => {
                 user: user.name,
                 links: links.html,
                 liked_by_user:false,
-                color: color
+                color: color,
+                loading: false
             })
         }
         getImages()

@@ -29,7 +29,8 @@
     "express-rate-limit": "^5.5.1",
     "find-config": "^1.0.0",
     "needle": "^3.0.0",
-    "node-fetch": "^2.6.6"
+    "node-fetch": "^2.6.6",
+    "react-loader-spinner": "^4.0.0"
   },
   "devDependencies": {
     "concurrently": "^6.4.0",
