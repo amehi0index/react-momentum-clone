@@ -14,18 +14,10 @@ const Todos = ({ showTodoCard }) => {
     const [inputValue, setInputValue] = useState("")
     const [showTodos, setShowTodos] = useState(false)
     
-    /*const [todos, setTodos] = useState([
-        {
-          item: "",
-          isComplete: "false"
-        }
-    ])*/
-
     const onSubmit = (e) => {
         e.preventDefault();
         setTodos([...todos, { item: inputValue }])
         setInputValue("")
-        console.log(todos)
     }
 
     const setTodoBtn = (color, url) => {  //imageData.color

@@ -35,7 +35,6 @@ const useUnsplashAPI = () => {
 
         async function getImages(){
             const response = await axios.get(imageURL)
-            console.log(response)
             const { urls, location, user, links, liked_by_user, color } = await response.data
     
             setImageData({

@@ -12,7 +12,7 @@ const Weather = ({ showForecast, setShowForecast }) => {
             <div className="temperature">
                 <div className="temperature-section">
                     <i className={`wi wi-owm-${currentWeather.id}`}></i>
-                    <h2 className="temperature-degree">{Math.round(currentWeather.temp)} &#176;</h2>
+                    <h2 className="temperature-degree">{Math.round(currentWeather.temp)}<span className="symbol">&#176;</span></h2>
                     <span></span>
                 </div>
                 <h1 className="temperature-city" onClick={()=>setShowForecast(!showForecast)}>{currentWeather.cityName}</h1>

@@ -11,6 +11,9 @@
 }
 
 #quote {
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
   transition: transform 0.5s linear;
   white-space: nowrap;
   width: 80%;

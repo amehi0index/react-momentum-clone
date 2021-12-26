@@ -10,7 +10,6 @@ const TodoItem = ({ todos, todo, isComplete, index, setTodos }) => {
             todos[index].isComplete = false
         }
         setTodos([...todos])
-        console.log(todos)
     }
 
     const deleteTodo = () => {

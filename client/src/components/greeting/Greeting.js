@@ -12,7 +12,7 @@ const [focus, setFocus] = useLocalStorage("focus", "Learn all the things")
 
 const nameRef = useRef();
 const focusRef = useRef();
-const[user, setUser] = useLocalStorage("username", "Amy")
+const[user, setUser] = useLocalStorage("username", "")
 
 const [isFocusEmpty, setIsFocusEmpty] = useState(true)
 
@@ -63,6 +63,7 @@ const [isFocusEmpty, setIsFocusEmpty] = useState(true)
                         html={user}
                         onChange={handleNameChange}
                     />
+                    <span className={user ? 'punctuation show' : 'punctuation'}>.</span>
                 </div>
 
                 <h2 className="focus-q">What is your main focus today?</h2>

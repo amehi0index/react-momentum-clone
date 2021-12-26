@@ -7,6 +7,7 @@ const Quote = () => {
     //const quoteUrl = `/api/quotes?category=inspire`
     const [author, setAuthor] = useState("")
     const [quote, setQuote] = useState("")
+    const [link, setLink] = useState("")
 
     useEffect(() => {
         async function dailyQuote(){
@@ -15,15 +16,19 @@ const Quote = () => {
            
             setQuote(data.contents.quotes[0].quote)
             setAuthor(data.contents.quotes[0].author)
+            setLink(data.contents.quotes[0].permalink)
         }
         dailyQuote()
     },[])
 
     return (
         <div className="quote-container">
-            <div id="quote">{quote}</div>
+            <a href={link} target="_blank" rel="noopener noreferrer" id="quote">
+                <div >{quote}</div>
+            </a>
             <div id="author">{author}</div>
         </div> 
+        
     )
 }
 

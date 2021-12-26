@@ -32,7 +32,7 @@ const Forecast = ({ showForecast }) => {
                 ))}
             </div>
             <div className="forecast-links">
-                <a href="!#">
+                <a href="https://openweathermap.org/" target="_blank" rel="noopener noreferrer">
                     More Weather <i className="fas fa-arrow-circle-right"></i>
                 </a>
             </div>

@@ -1,4 +1,6 @@
 .temperature-container {
+  display: flex;
+  flex-direction: column;
   margin-right: 5px;
 }
 
@@ -9,7 +11,7 @@
 
 .temperature-section {
   display: flex;
-  padding: 10px 0 0 0;
+  padding: 8px 0 0 0;
   margin-bottom: 5px;
   max-width: 120px;
   max-height: 40px;
@@ -18,14 +20,21 @@
 
 .temperature i {
   font-size: 1rem;
-  padding: 0 2px;
+  padding: 0 2px 0 0;
 }
 
 .temperature-degree {
-  margin-top: 12px;
-  font-size: 16px;
-  padding: 0 2px 0 3px;
+  margin-top: 10px;
+  font-size: 28px;
+  font-weight: 500;
+  padding: 0 0 5px 5px;
   cursor: pointer;
+}
+
+.temperature-degree .symbol {
+  display: inline-block;
+  font-size: 20px;
+  transform: translateY(-7px);
 }
 
 .temperature-section span {
@@ -33,7 +42,9 @@
 }
 
 .temperature .temperature-city {
+  align-self: flex-end;
   font-size: 12px;
+  font-weight: 400;
   cursor: pointer;
 }
 
