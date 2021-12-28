@@ -17,7 +17,7 @@
 
 ## Description
 
-This is a clone productivity application based on the Chrome Momentum Application. This application uses the Google, Yahoo, and Bing search engines, local storage to save user preferences, and a proxy server to facilitate requests to third-party API's.
+This clone application based on the Chrome Momentum productivity application. This application uses the Google, Yahoo, and Bing search engines, local storage to save user preferences, and a proxy server to facilitate requests to third-party API's.
 
 #### Public API's
 
