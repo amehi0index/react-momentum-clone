@@ -2,7 +2,7 @@
 
 ![Project Image](weather.png)
 
-> Momentum Clone Application built in React. Utilizes a Node-Express proxy server to hide API keys and fetch third-party API data.
+> Momentum Clone Application built with React.js and Node.js.
 
 ---
 
@@ -17,7 +17,7 @@
 
 ## Description
 
-This is a clone productivity application based on the Chrome Momentum Application. This application uses the Google, Yahoo, and Bing search engines and local storage to save user preferences.
+This is a clone productivity application based on the Chrome Momentum Application. This application uses the Google, Yahoo, and Bing search engines, local storage to save user preferences, and a proxy server to facilitate requests to third-party API's.
 
 #### Public API's
 
