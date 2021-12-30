@@ -10,6 +10,23 @@ body {
   overflow: hidden;
 }
 
+/*Preloader*/
+.loader-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: #015f5f;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+  opacity: 1;
+  transition: opacity 5s ease;
+}
+
 .container {
   display: flex;
   align-items: center;
@@ -21,10 +38,6 @@ body {
   background: rgba(0, 0, 0, 0.2);
 }
 
-.loader {
-  font-size: 52px;
-  color: #000;
-}
 .container.bg-darken {
   background: rgba(0, 0, 0, 0.4);
 }
