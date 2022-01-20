@@ -1,6 +1,6 @@
 # Momentum Clone
 
-![Project Image](weather.png)
+![Project Image](momentum.png)
 
 > Momentum Clone Application built with React.js and Node.js.
 

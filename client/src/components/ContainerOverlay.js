@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import useUnsplashAPI from '../hooks/useUnsplashAPI'
 import Greeting from '../components/greeting/Greeting'
 import SearchForm from '../components/search/SearchForm'
