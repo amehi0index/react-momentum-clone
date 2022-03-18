@@ -73,6 +73,7 @@
   background: none;
   border: none;
   outline: 0;
+  cursor: pointer;
 }
 
 .search-arrow {

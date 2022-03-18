@@ -40,7 +40,7 @@ const SearchForm = () => {
         window.open(formAction, '_blank', 'noopener')
     }
 
-    const toggleForm = () =>{
+    const toggleForm = () => {
         setShowSearchForm(!showSearchForm)
         if (showCard) setShowcard(false)
     }
