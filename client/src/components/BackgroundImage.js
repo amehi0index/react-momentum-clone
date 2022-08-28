@@ -23,9 +23,7 @@ const BackgroundImage = () => {
     }
 
     return (
-        <div>
-            
-        </div>
+        <div></div>
     )
 }
 
