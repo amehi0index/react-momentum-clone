@@ -15,7 +15,14 @@ router.get('/', cache('2 minutes'), async (req, res) => {
             ...url.parse(req.url, true).query
         })
 
-        const apiRes = await needle('get', `${process.env.API_QUOTE_URL}${params}`)
+        const apiKey = process.env.API_QUOTE_KEY
+
+        const apiRes = await needle('get', `${process.env.API_QUOTE_URL}${params}`, {
+            headers: {
+                'X-TheySaidSo-Api-Secret': apiKey
+            }
+        })
+
         const data = apiRes.body
 
         console.log(data)

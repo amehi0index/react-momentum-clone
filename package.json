@@ -8,9 +8,9 @@
     "server": "nodemon backend/server.js",
     "client": "npm start --prefix client",
     "clientinstall": "npm install --prefix client",
-    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "dev": "concurrently \"set NODE_OPTIONS=--openssl-legacy-provider&& npm run server\" \"set NODE_OPTIONS=--openssl-legacy-provider&& npm run client\"",
     "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
-  },
+  },  
   "repository": {
     "type": "git",
     "url": "git+https://github.com/amehi4yus/react-momentum-clone.git"
