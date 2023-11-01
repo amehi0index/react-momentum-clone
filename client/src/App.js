@@ -1,7 +1,7 @@
 
 
 import React, { useState, useEffect } from 'react'
-import Loader from "react-loader-spinner"
+import {ThreeDots}  from "react-loader-spinner"
 import ContainerOverlay from './components/ContainerOverlay'
 import BackgroundImage from './components/BackgroundImage'
 import useTodoShow from './hooks/useTodoShow'
@@ -22,7 +22,7 @@ const App = () => {
     <>
       {loading 
         ?  <div className="loader-container">
-            <Loader
+            <ThreeDots
               className="loader"
               type="ThreeDots"
               color="#ffff"
