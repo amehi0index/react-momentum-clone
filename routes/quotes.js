@@ -11,17 +11,22 @@ router.get('/', cache('2 minutes'), async (req, res) => {
 
     try {
 
-        const params = new URLSearchParams({
-            ...url.parse(req.url, true).query
-        })
+        // const params = new URLSearchParams({
+        //     ...url.parse(req.url, true).query
+        // })
 
         const apiKey = process.env.API_QUOTE_KEY
+        const url = process.env.API_QUOTES_URL
 
-        const apiRes = await needle('get', `${process.env.API_QUOTE_URL}${params}`, {
-            headers: {
-                'X-TheySaidSo-Api-Secret': apiKey
-            }
-        })
+        console.log('url', url)
+
+        const apiRes = await needle('get', url)
+
+        // const apiRes = await needle('get', `https://api.quotable.io//random`, {
+        //     headers: {
+        //         'X-TheySaidSo-Api-Secret': apiKey
+        //     }
+        // })
 
         const data = apiRes.body
 
